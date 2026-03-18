@@ -19,27 +19,27 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh}
 .fbtn{padding:7px 14px;border-radius:8px;font-size:12px;font-weight:500;color:var(--txd);cursor:pointer;border:none;background:none;font-family:var(--f);transition:.15s}
 .fbtn.on{background:var(--acc);color:#000;font-weight:700}
 .main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
 .stat{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:18px 20px}
 .stat-l{font-size:11px;font-weight:600;color:var(--txd);text-transform:uppercase;letter-spacing:1px;display:flex;gap:6px;margin-bottom:4px}
-.stat-v{font-size:30px;font-weight:700;font-family:var(--m);line-height:1}
+.stat-v{font-size:28px;font-weight:700;font-family:var(--m);line-height:1}
 .stat-s{font-size:12px;color:var(--txd);margin-top:4px}
-.v-acc{color:var(--acc)}.v-grn{color:var(--grn)}.v-red{color:var(--red)}.v-blu{color:var(--blu)}
+.v-acc{color:var(--acc)}.v-grn{color:var(--grn)}.v-red{color:var(--red)}.v-blu{color:var(--blu)}.v-pur{color:var(--pur)}
 .card{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:20px;margin-bottom:16px}
 .card-sel{border-color:var(--acc)}
 .sec{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--txd);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
-.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;cursor:pointer}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:8px}
 .bar-label{width:110px;font-size:12px;font-weight:600;text-align:right;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar-track{flex:1;height:26px;background:var(--s2);border-radius:6px;overflow:hidden;position:relative}
 .bar-fill{height:100%;border-radius:6px;transition:width .5s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
 .bar-fill span{font-size:11px;font-weight:700;color:#000}
 .bar-ext{position:absolute;top:50%;transform:translateY(-50%);font-size:11px;font-weight:700;color:var(--txd)}
-.bar-sub{width:50px;font-size:11px;color:var(--txd);text-align:right;flex-shrink:0}
-.badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px}
+.bar-sub{width:60px;font-size:11px;color:var(--txd);text-align:right;flex-shrink:0}
+.badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
 .b-grn{background:var(--grnd);color:var(--grn)}.b-red{background:var(--redd);color:var(--red)}
-.b-yel{background:var(--accd);color:var(--acc)}.b-blu{background:var(--blud);color:var(--blu)}
+.b-yel{background:var(--accd);color:var(--acc)}.b-blu{background:var(--blud);color:var(--blu)}.b-pur{background:rgba(168,85,247,.12);color:var(--pur)}
 .alert{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:var(--rs);margin-bottom:6px}
 .a-red{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2)}
 .a-grn{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)}
@@ -51,7 +51,6 @@ thead{background:var(--s2)}
 th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--txd);white-space:nowrap}
 td{padding:10px 12px;border-top:1px solid var(--brd);white-space:nowrap}
 tr:hover td{background:rgba(245,158,11,.03)}
-tr{cursor:pointer}
 .detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
 .detail-cell{text-align:center;padding:10px;background:var(--s2);border-radius:8px}
 .detail-v{font-size:22px;font-weight:700;font-family:var(--m)}
@@ -60,17 +59,18 @@ tr{cursor:pointer}
 .loading{text-align:center;padding:80px 20px;color:var(--txd)}
 .spinner{width:36px;height:36px;border:3px solid var(--brd);border-top-color:var(--acc);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.error{text-align:center;padding:60px 20px;color:var(--red)}
 .refresh-btn{padding:8px 20px;background:var(--acc);color:#000;border:none;border-radius:var(--rs);font-weight:700;cursor:pointer;font-family:var(--f);font-size:13px;margin-left:10px}
-.ts{font-size:11px;color:var(--txm);display:flex;align-items:center;gap:6px}
+.ts{font-size:11px;color:var(--txm);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .footer{text-align:center;margin-top:24px;font-size:11px;color:var(--txm)}
 .hint{font-size:11px;color:var(--txm);text-align:center;margin-top:4px}
 .analysis-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:20px}
-@media(max-width:700px){.analysis-grid{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+.compras-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.divider{height:1px;background:var(--brd);margin:24px 0 20px;position:relative}
+.divider-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg);padding:0 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--txm)}
+@media(max-width:700px){.analysis-grid{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.compras-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <nav class="nav"><div class="nav-in">
   <div class="brand">
     <div class="brand-icon">M</div>
@@ -81,290 +81,233 @@ tr{cursor:pointer}
   </div>
   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
     <div class="filters" id="filters"></div>
-    <button class="refresh-btn" onclick="loadData()">↻ Actualizar</button>
+    <button class="refresh-btn" onclick="loadAll()">↻ Actualizar</button>
   </div>
 </div></nav>
-
 <div class="main" id="app">
   <div class="loading"><div class="spinner"></div>Cargando datos desde Google Sheets...</div>
 </div>
-
 <script>
-// ===== CONFIG =====
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0FDT0-f1cDd2TxdZFvshSSaGt695yONwM5djelOS5gwmD53D3nO_HHLOw_InMd4lleLgR6_DD46Fo/pub?gid=2140392490&single=true&output=csv';
+var CSV_CARGA='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0FDT0-f1cDd2TxdZFvshSSaGt695yONwM5djelOS5gwmD53D3nO_HHLOw_InMd4lleLgR6_DD46Fo/pub?gid=2140392490&single=true&output=csv';
+var CSV_COMPRAS='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0FDT0-f1cDd2TxdZFvshSSaGt695yONwM5djelOS5gwmD53D3nO_HHLOw_InMd4lleLgR6_DD46Fo/pub?gid=435938739&single=true&output=csv';
+var ALL_DATA=[],ALL_COMPRAS=[],PERIOD='all',SEL_MAQ=null;
 
-let ALL_DATA = [];
-let PERIOD = 'all';
-let SEL_MAQ = null;
+function parseCSV(t){var l=t.trim().split('\n');if(l.length<2)return[];var h=parseLine(l[0]);return l.slice(1).map(function(ln){var v=parseLine(ln);var o={};h.forEach(function(hh,i){o[hh.trim()]=(v[i]||'').trim()});return o})}
+function parseLine(l){var r=[],c='',q=false;for(var i=0;i<l.length;i++){var ch=l[i];if(ch==='"')q=!q;else if(ch===','&&!q){r.push(c);c=''}else c+=ch}r.push(c);return r}
 
-// ===== CSV PARSER =====
-function parseCSV(text) {
-  const lines = text.trim().split('\n');
-  if (lines.length < 2) return [];
-  const headers = parseCSVLine(lines[0]);
-  return lines.slice(1).map(line => {
-    const vals = parseCSVLine(line);
-    const obj = {};
-    headers.forEach((h, i) => obj[h.trim()] = (vals[i] || '').trim());
-    return obj;
-  }).filter(r => r['Fecha']);
-}
+function normCarga(raw){return raw.filter(function(r){return r['Fecha']}).map(function(r){var ht=parseFloat(r['Horas Totales'])||0;return{fecha:r['Fecha']||'',dia:r['Día']||'',obra:r['Obra']||'',maquina:r['Máquina']||'',operador:r['Operador']||'',inicio:r['Hora Inicio']||'',fin:r['Hora Fin']||'',hsTotales:ht,hsNetas:parseFloat(r['Horas Netas'])||ht,huboParada:r['Hubo Parada']||'NO',motivoParada:r['Motivo Parada']||'',viajes:parseInt(r['Viajes'])||0,combustible:parseInt(r['Combustible (lts)'])||0,obs:r['Observaciones']||''}})}
 
-function parseCSVLine(line) {
-  const result = []; let current = ''; let inQuotes = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') { inQuotes = !inQuotes; }
-    else if (ch === ',' && !inQuotes) { result.push(current); current = ''; }
-    else { current += ch; }
-  }
-  result.push(current);
-  return result;
-}
+function normCompras(raw){return raw.filter(function(r){return r['Fecha de compra']}).map(function(r){return{fecha:r['Fecha de compra']||'',obra:r['Obra']||'',categoria:r['Categoría']||'Sin categoría',detalle:r['Detalle del material']||'',cantidad:parseInt(r['Cantidad'])||0,monto:parseFloat((r['Monto total ($)']||'0').replace(/\./g,'').replace(',','.'))||0,proveedor:r['Proveedor']||'Sin proveedor',formaPago:r['Forma de pago']||'',autorizo:r['¿Quién autorizó?']||'',factura:r['¿Tiene factura/remito?']||'',obs:r['Observaciones']||''}})}
 
-function normalizeData(raw) {
-  return raw.map(r => {
-    const ht = parseFloat(r['Horas Totales']) || 0;
-    const hn = parseFloat(r['Horas Netas']) || ht;
-    return {
-      fecha: r['Fecha'] || '',
-      dia: r['Día'] || '',
-      obra: r['Obra'] || '',
-      maquina: r['Máquina'] || '',
-      operador: r['Operador'] || '',
-      inicio: r['Hora Inicio'] || '',
-      fin: r['Hora Fin'] || '',
-      hsTotales: ht,
-      hsNetas: hn,
-      huboParada: r['Hubo Parada'] || 'NO',
-      motivoParada: r['Motivo Parada'] || '',
-      viajes: parseInt(r['Viajes']) || 0,
-      combustible: parseInt(r['Combustible (lts)']) || 0,
-      obs: r['Observaciones'] || ''
-    };
+function fetchCSV(url){return fetch(url+'&_t='+Date.now()).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text()})}
+
+function loadAll(){
+  var app=document.getElementById('app');
+  app.innerHTML='<div class="loading"><div class="spinner"></div>Cargando datos desde Google Sheets...</div>';
+  Promise.all([fetchCSV(CSV_CARGA),fetchCSV(CSV_COMPRAS)]).then(function(results){
+    ALL_DATA=normCarga(parseCSV(results[0]));
+    ALL_COMPRAS=normCompras(parseCSV(results[1]));
+    render();
+  }).catch(function(e){
+    app.innerHTML='<div style="text-align:center;padding:60px;color:var(--red)"><h2>Error cargando datos</h2><p>'+e.message+'</p></div>';
   });
 }
 
-// ===== LOAD DATA =====
-async function loadData() {
-  const app = document.getElementById('app');
-  app.innerHTML = '<div class="loading"><div class="spinner"></div>Cargando datos desde Google Sheets...</div>';
-  try {
-    const resp = await fetch(CSV_URL + '&_t=' + Date.now());
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const text = await resp.text();
-    const raw = parseCSV(text);
-    ALL_DATA = normalizeData(raw);
-    render();
-  } catch (e) {
-    app.innerHTML = '<div class="error"><h2>Error cargando datos</h2><p>' + e.message + '</p><p style="margin-top:12px;color:var(--txd)">Verificá que la Sheet esté publicada como CSV.</p></div>';
-  }
+var fmt=function(n){return typeof n==='number'?n.toLocaleString('es-AR',{maximumFractionDigits:1}):n};
+var fmtM=function(n){return '$'+n.toLocaleString('es-AR',{maximumFractionDigits:0})};
+var pct=function(n){return(n*100).toFixed(0)+'%'};
+var colors=['#f59e0b','#3b82f6','#22c55e','#ef4444','#a855f7','#06b6d4','#f97316','#ec4899'];
+
+function getFiltered(){
+  if(PERIOD==='all')return{data:ALL_DATA,compras:ALL_COMPRAS};
+  var now=new Date();
+  if(PERIOD==='week'){var d=new Date();d.setDate(d.getDate()-7);var cut=d.toISOString().split('T')[0];return{data:ALL_DATA.filter(function(r){return r.fecha>=cut}),compras:ALL_COMPRAS.filter(function(r){return r.fecha>=cut})}}
+  if(PERIOD==='month'){var m=now.toISOString().slice(0,7);return{data:ALL_DATA.filter(function(r){return r.fecha.startsWith(m)}),compras:ALL_COMPRAS.filter(function(r){return r.fecha.startsWith(m)})}}
+  return{data:ALL_DATA,compras:ALL_COMPRAS};
 }
 
-// ===== HELPERS =====
-const fmt = n => typeof n === 'number' ? n.toLocaleString('es-AR', {maximumFractionDigits:1}) : n;
-const pct = n => (n * 100).toFixed(0) + '%';
-const colors = ['#f59e0b','#3b82f6','#22c55e','#ef4444','#a855f7','#06b6d4','#f97316','#ec4899'];
-
-function getFiltered() {
-  if (PERIOD === 'all') return ALL_DATA;
-  const now = new Date();
-  if (PERIOD === 'week') {
-    const d = new Date(); d.setDate(d.getDate() - 7);
-    return ALL_DATA.filter(r => r.fecha >= d.toISOString().split('T')[0]);
-  }
-  if (PERIOD === 'month') {
-    const m = now.toISOString().slice(0, 7);
-    return ALL_DATA.filter(r => r.fecha.startsWith(m));
-  }
-  return ALL_DATA;
+function makeBar(label,value,max,color,sub,clickable){
+  var w=Math.max((value/max)*100,2);
+  var vTxt=typeof value==='number'&&value>999?fmtM(value):fmt(value);
+  var click=clickable?"cursor:pointer":"cursor:default";
+  return '<div class="bar-row" style="'+click+'"'+(clickable?' onclick="SEL_MAQ=\''+label.replace(/'/g,"\\'")+'\';render()"':'')+'>'
+    +'<div class="bar-label">'+label+'</div>'
+    +'<div class="bar-track"><div class="bar-fill" style="width:'+w+'%;background:'+color+'">'+(w>18?'<span>'+vTxt+'</span>':'')+'</div>'+(w<=18?'<span class="bar-ext" style="left:calc('+w+'% + 8px)">'+vTxt+'</span>':'')+'</div>'
+    +'<div class="bar-sub">'+(sub||'')+'</div></div>';
 }
 
-// ===== RENDER =====
-function render() {
-  const data = getFiltered();
-  const app = document.getElementById('app');
+function render(){
+  var f=getFiltered(),data=f.data,compras=f.compras;
+  var app=document.getElementById('app');
 
-  // Filters
-  document.getElementById('filters').innerHTML = [['all','Todo'],['month','Este mes'],['week','7 días']].map(([k,l]) =>
-    `<button class="fbtn${PERIOD===k?' on':''}" onclick="PERIOD='${k}';SEL_MAQ=null;render()">${l}</button>`
-  ).join('');
+  document.getElementById('filters').innerHTML=[['all','Todo'],['month','Este mes'],['week','7 días']].map(function(p){
+    return '<button class="fbtn'+(PERIOD===p[0]?' on':'')+'" onclick="PERIOD=\''+p[0]+'\';SEL_MAQ=null;render()">'+p[1]+'</button>';
+  }).join('');
 
-  if (data.length === 0) {
-    app.innerHTML = `<div class="loading" style="padding:60px">
-      <div style="font-size:48px;margin-bottom:16px">📋</div>
-      <h2 style="color:var(--tx);margin-bottom:8px">Sin datos${PERIOD !== 'all' ? ' en este período' : ''}</h2>
-      <p style="color:var(--txd)">${PERIOD !== 'all' ? 'Probá con otro filtro o ' : ''}Los datos van a aparecer acá cuando se carguen desde el formulario.</p>
-    </div>`;
+  if(data.length===0&&compras.length===0){
+    app.innerHTML='<div class="loading" style="padding:60px"><div style="font-size:48px;margin-bottom:16px">📋</div><h2 style="color:var(--tx);margin-bottom:8px">Sin datos'+(PERIOD!=='all'?' en este período':'')+'</h2><p style="color:var(--txd)">Los datos aparecen cuando se cargan desde los formularios.</p></div>';
     return;
   }
 
-  // Calcs
-  const tDias = new Set(data.map(r => r.fecha)).size;
-  const tHs = data.reduce((s,r) => s + r.hsNetas, 0);
-  const tHsT = data.reduce((s,r) => s + r.hsTotales, 0);
-  const tRot = data.filter(r => r.motivoParada === 'Rotura mecánica').length;
-  const tPar = data.filter(r => r.huboParada === 'SI').length;
-  const tComb = data.reduce((s,r) => s + r.combustible, 0);
-  const prod = tHsT > 0 ? tHs / tHsT : 1;
+  // MAQUINARIA
+  var tDias=0,fechasSet={};data.forEach(function(r){fechasSet[r.fecha]=1});for(var k in fechasSet)tDias++;
+  var tHs=0,tHsT=0,tRot=0,tPar=0,tComb=0;
+  data.forEach(function(r){tHs+=r.hsNetas;tHsT+=r.hsTotales;if(r.motivoParada==='Rotura mecánica')tRot++;if(r.huboParada==='SI')tPar++;tComb+=r.combustible});
+  var prod=tHsT>0?tHs/tHsT:1;
 
-  const bM = {};
-  data.forEach(r => {
-    if (!bM[r.maquina]) bM[r.maquina] = {d:new Set(),h:0,ht:0,rot:0,par:0,cb:0,mot:{},obs:[]};
-    const m = bM[r.maquina]; m.d.add(r.fecha); m.h += r.hsNetas; m.ht += r.hsTotales;
-    if (r.motivoParada==='Rotura mecánica') { m.rot++; m.obs.push({f:r.fecha,o:r.obs}); }
-    if (r.huboParada==='SI') { m.par++; m.mot[r.motivoParada]=(m.mot[r.motivoParada]||0)+1; }
-    m.cb += r.combustible;
+  var bM={};
+  data.forEach(function(r){
+    if(!bM[r.maquina])bM[r.maquina]={d:{},h:0,ht:0,rot:0,par:0,cb:0,obs:[]};
+    var m=bM[r.maquina];m.d[r.fecha]=1;m.h+=r.hsNetas;m.ht+=r.hsTotales;
+    if(r.motivoParada==='Rotura mecánica'){m.rot++;m.obs.push({f:r.fecha,o:r.obs})}
+    if(r.huboParada==='SI')m.par++;m.cb+=r.combustible;
   });
 
-  const bO = {};
-  data.forEach(r => {
-    if (!bO[r.operador]) bO[r.operador] = {d:new Set(),h:0,rot:0};
-    bO[r.operador].d.add(r.fecha); bO[r.operador].h += r.hsNetas;
-    if (r.motivoParada==='Rotura mecánica') bO[r.operador].rot++;
+  var bO={};
+  data.forEach(function(r){
+    if(!bO[r.operador])bO[r.operador]={d:{},h:0,rot:0};
+    bO[r.operador].d[r.fecha]=1;bO[r.operador].h+=r.hsNetas;
+    if(r.motivoParada==='Rotura mecánica')bO[r.operador].rot++;
   });
 
-  const bMot = {};
-  data.filter(r => r.huboParada==='SI' && r.motivoParada).forEach(r => {
-    bMot[r.motivoParada] = (bMot[r.motivoParada]||0) + 1;
+  var bMot={};
+  data.forEach(function(r){if(r.huboParada==='SI'&&r.motivoParada)bMot[r.motivoParada]=(bMot[r.motivoParada]||0)+1});
+
+  function objSize(o){var n=0;for(var k in o)n++;return n}
+  function sortDesc(obj,key){return Object.keys(obj).sort(function(a,b){return(typeof key==='function'?key(obj[b])-key(obj[a]):obj[b][key]-obj[a][key])})}
+
+  var mxM=1;for(var k in bM)if(bM[k].h>mxM)mxM=bM[k].h;
+  var mxO=1;for(var k in bO)if(bO[k].h>mxO)mxO=bO[k].h;
+  var mxP=1;for(var k in bMot)if(bMot[k]>mxP)mxP=bMot[k];
+
+  // COMPRAS
+  var tGasto=0,nCompras=compras.length;
+  compras.forEach(function(r){tGasto+=r.monto});
+  var bCat={},bProv={};
+  compras.forEach(function(r){
+    bCat[r.categoria]=(bCat[r.categoria]||0)+r.monto;
+    if(!bProv[r.proveedor])bProv[r.proveedor]={monto:0,n:0};
+    bProv[r.proveedor].monto+=r.monto;bProv[r.proveedor].n++;
+  });
+  var mxCat=1;for(var k in bCat)if(bCat[k]>mxCat)mxCat=bCat[k];
+  var mxProv=1;for(var k in bProv)if(bProv[k].monto>mxProv)mxProv=bProv[k].monto;
+
+  // ALERTS
+  var alertsH='';
+  if(data.length>0){
+    var sorted=data.slice().sort(function(a,b){return b.fecha.localeCompare(a.fecha)});
+    var ld=sorted[0].fecha;
+    var dd=Math.floor((new Date()-new Date(ld+'T12:00:00'))/864e5);
+    if(dd>2)alertsH+='<div class="alert a-red"><span class="a-icon">🔴</span><span class="a-text">Datos desactualizados: último registro hace '+dd+' días ('+ld+')</span></div>';
+    else alertsH+='<div class="alert a-grn"><span class="a-icon">✅</span><span class="a-text">Datos al día — Último: '+ld+'</span></div>';
+  }
+  if(tRot>0){var lr=data.filter(function(r){return r.motivoParada==='Rotura mecánica'}).slice(-1)[0];
+    alertsH+='<div class="alert a-'+(tRot>5?'red':'yel')+'"><span class="a-icon">🔧</span><span class="a-text">'+tRot+' roturas. Última: '+(lr?lr.maquina:'')+' ('+(lr?lr.fecha:'')+') — '+(lr?lr.obs||'sin detalle':'')+'</span></div>'}
+  for(var n in bM){var m=bM[n];var ds=objSize(m.d);var dp=ds>0?1-m.rot/ds:1;
+    if(dp<0.8)alertsH+='<div class="alert a-red"><span class="a-icon">⚠️</span><span class="a-text">'+n+': disponibilidad '+pct(dp)+'. '+m.rot+' roturas en '+ds+' días.</span></div>'}
+  var fuelStops=data.filter(function(r){return r.motivoParada==='Sin combustible'}).length;
+  if(fuelStops>0)alertsH+='<div class="alert a-yel"><span class="a-icon">⛽</span><span class="a-text">'+fuelStops+' paradas por combustible. Coordinar con logística.</span></div>';
+
+  // BARS MAQUINARIA
+  var maqKeys=Object.keys(bM).sort(function(a,b){return bM[b].h-bM[a].h});
+  var maqBars='';maqKeys.forEach(function(n,i){maqBars+=makeBar(n,bM[n].h,mxM,colors[i%colors.length],objSize(bM[n].d)+'d',true)});
+  var opKeys=Object.keys(bO).sort(function(a,b){return bO[b].h-bO[a].h});
+  var opBars='';opKeys.forEach(function(n,i){var short=n.length>14?n.split(',')[0]:n;opBars+=makeBar(short,bO[n].h,mxO,colors[(i+2)%colors.length],objSize(bO[n].d)+'d',false)});
+
+  // PARADAS
+  var parH='';
+  var motKeys=Object.keys(bMot);
+  if(motKeys.length>0){
+    var motBars='';motKeys.sort(function(a,b){return bMot[b]-bMot[a]}).forEach(function(m){
+      var col=m==='Rotura mecánica'?'var(--red)':m==='Sin combustible'?'var(--acc)':'var(--blu)';
+      motBars+=makeBar(m,bMot[m],mxP,col,bMot[m]+'x',false);
+    });
+    parH='<div class="card"><div class="sec"><span class="dot" style="background:var(--red)"></span>Análisis de Paradas</div>'
+      +'<div class="analysis-grid"><div>'+motBars+'</div>'
+      +'<div style="font-size:13px;color:var(--txd);line-height:1.7">'
+      +'<div style="font-weight:700;color:var(--tx);margin-bottom:6px">Resumen</div>'
+      +'<div>Paradas totales: <b style="color:var(--tx)">'+tPar+'</b></div>'
+      +'<div>Horas perdidas: <b style="color:var(--red)">'+fmt(tHsT-tHs)+'h</b></div>'
+      +'<div>% improductivo: <b style="color:'+(prod<.9?'var(--red)':'var(--grn)')+'">'+pct(1-prod)+'</b></div>'
+      +(fuelStops>0?'<div style="margin-top:8px;padding:8px;background:var(--accd);border-radius:6px;color:var(--acc);font-size:12px;font-weight:600">⛽ '+fuelStops+' paradas por combustible evitables</div>':'')
+      +'</div></div></div>';
+  }
+
+  // DETAIL
+  var detH='';
+  if(SEL_MAQ&&bM[SEL_MAQ]){
+    var det=bM[SEL_MAQ];var ds=objSize(det.d);var dp=ds>0?1-det.rot/ds:1;
+    var cells=[['Días',ds,'v-blu'],['Hs Netas',fmt(det.h),'v-acc'],['Roturas',det.rot,det.rot>3?'v-red':'v-grn'],['Disponib.',ds>0?pct(dp):'-',dp<.85?'v-red':'v-grn'],['Combustible',fmt(det.cb)+' lts','v-grn'],['Hs/Día',ds>0?fmt(det.h/ds):'-','v-blu']];
+    var cellsH='';cells.forEach(function(c){cellsH+='<div class="detail-cell"><div class="detail-v '+c[2]+'">'+c[1]+'</div><div class="detail-l">'+c[0]+'</div></div>'});
+    var obsH='';
+    if(det.obs.length>0){obsH='<div style="margin-top:12px"><div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px">Historial de roturas:</div>';
+      det.obs.slice(-5).forEach(function(o){obsH+='<div style="font-size:12px;color:var(--txd);padding:4px 0;border-bottom:1px solid var(--s2)"><b style="color:var(--tx)">'+o.f+'</b> — '+o.o+'</div>'});obsH+='</div>'}
+    detH='<div class="card card-sel"><div class="sec"><span class="dot" style="background:var(--acc)"></span>Detalle: '+SEL_MAQ+'</div><div class="detail-grid">'+cellsH+'</div>'+obsH+'<button class="close-btn" onclick="SEL_MAQ=null;render()">Cerrar detalle</button></div>';
+  }
+
+  // TABLE MAQ
+  var tblR='';
+  maqKeys.forEach(function(n){
+    var m=bM[n];var ds=objSize(m.d);var dp=ds>0?1-m.rot/ds:1;var dpC=dp>=.9?'b-grn':dp>=.7?'b-yel':'b-red';
+    tblR+='<tr style="cursor:pointer" onclick="SEL_MAQ=\''+n.replace(/'/g,"\\'")+'\';render()">'
+      +'<td style="font-weight:600">'+n+'</td><td>'+ds+'</td>'
+      +'<td style="font-family:var(--m);font-size:12px">'+fmt(m.h)+'</td>'
+      +'<td style="font-family:var(--m);font-size:12px">'+(ds>0?fmt(m.h/ds):'-')+'</td>'
+      +'<td>'+(m.rot>0?'<span class="badge b-red">'+m.rot+'</span>':'<span class="badge b-grn">0</span>')+'</td>'
+      +'<td>'+(m.par>0?'<span class="badge b-yel">'+m.par+'</span>':'<span class="badge b-grn">0</span>')+'</td>'
+      +'<td><span class="badge '+dpC+'">'+pct(dp)+'</span></td>'
+      +'<td style="font-family:var(--m);font-size:12px">'+fmt(m.cb)+' lts</td></tr>';
   });
 
-  const mxM = Math.max(...Object.values(bM).map(m=>m.h), 1);
-  const mxO = Math.max(...Object.values(bO).map(o=>o.h), 1);
-  const mxP = Math.max(...Object.values(bMot), 1);
-
-  // Alerts
-  let alertsHtml = '';
-  const sorted = [...data].sort((a,b) => b.fecha.localeCompare(a.fecha));
-  const lastDate = sorted[0]?.fecha;
-  if (lastDate) {
-    const dd = Math.floor((new Date() - new Date(lastDate+'T12:00:00')) / 864e5);
-    if (dd > 2) alertsHtml += `<div class="alert a-red"><span class="a-icon">🔴</span><span class="a-text">Datos desactualizados: último registro hace ${dd} días (${lastDate})</span></div>`;
-    else alertsHtml += `<div class="alert a-grn"><span class="a-icon">✅</span><span class="a-text">Datos al día — Último registro: ${lastDate}</span></div>`;
-  }
-  if (tRot > 0) {
-    const lr = data.filter(r=>r.motivoParada==='Rotura mecánica').slice(-1)[0];
-    alertsHtml += `<div class="alert a-${tRot>5?'red':'yel'}"><span class="a-icon">🔧</span><span class="a-text">${tRot} roturas. Última: ${lr?.maquina} (${lr?.fecha}) — ${lr?.obs||'sin detalle'}</span></div>`;
-  }
-  Object.entries(bM).forEach(([n,m]) => {
-    const dp = m.d.size>0 ? 1-m.rot/m.d.size : 1;
-    if (dp < 0.8) alertsHtml += `<div class="alert a-red"><span class="a-icon">⚠️</span><span class="a-text">${n}: disponibilidad ${pct(dp)}. ${m.rot} roturas en ${m.d.size} días.</span></div>`;
-  });
-  const fs = data.filter(r=>r.motivoParada==='Sin combustible').length;
-  if (fs > 0) alertsHtml += `<div class="alert a-yel"><span class="a-icon">⛽</span><span class="a-text">${fs} paradas por combustible. Coordinar con logística Metrovial.</span></div>`;
-
-  // Bars HTML
-  function barsHtml(entries, max, startColor) {
-    return entries.map(([n,v,sub], i) => {
-      const w = Math.max((v/max)*100, 2);
-      const col = colors[(i+startColor)%colors.length];
-      return `<div class="bar-row" onclick="SEL_MAQ='${n.replace(/'/g,"\\'")}';render()">
-        <div class="bar-label">${n.length > 14 ? n.split(',')[0] : n}</div>
-        <div class="bar-track"><div class="bar-fill" style="width:${w}%;background:${col}">${w>18?`<span>${fmt(v)}</span>`:''}</div>${w<=18?`<span class="bar-ext" style="left:calc(${w}% + 8px)">${fmt(v)}</span>`:''}</div>
-        <div class="bar-sub">${sub}</div>
-      </div>`;
-    }).join('');
+  // COMPRAS SECTION
+  var comprasH='';
+  if(compras.length>0){
+    var catBars='';Object.keys(bCat).sort(function(a,b){return bCat[b]-bCat[a]}).forEach(function(n,i){catBars+=makeBar(n,bCat[n],mxCat,colors[(i+3)%colors.length],fmtM(bCat[n]),false)});
+    var provBars='';Object.keys(bProv).sort(function(a,b){return bProv[b].monto-bProv[a].monto}).forEach(function(n,i){provBars+=makeBar(n,bProv[n].monto,mxProv,colors[(i+5)%colors.length],bProv[n].n+'x',false)});
+    var compraRows='';
+    compras.slice().sort(function(a,b){return b.fecha.localeCompare(a.fecha)}).slice(0,15).forEach(function(r){
+      compraRows+='<tr style="cursor:default"><td>'+r.fecha+'</td><td><span class="badge b-pur">'+r.categoria+'</span></td><td style="font-weight:600">'+r.detalle+'</td><td style="font-family:var(--m);font-size:12px">'+fmtM(r.monto)+'</td><td>'+r.proveedor+'</td><td>'+r.autorizo+'</td><td>'+(r.factura==='Sí'?'<span class="badge b-grn">Sí</span>':'<span class="badge b-yel">No</span>')+'</td></tr>';
+    });
+    comprasH='<div class="divider"><span class="divider-label">Compras y Materiales</span></div>'
+      +'<div class="stats" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">'
+      +'<div class="stat"><div class="stat-l"><span>🛒</span>Compras</div><div class="stat-v v-pur">'+nCompras+'</div><div class="stat-s">órdenes registradas</div></div>'
+      +'<div class="stat"><div class="stat-l"><span>💰</span>Gasto Total</div><div class="stat-v v-red">'+fmtM(tGasto)+'</div><div class="stat-s">en materiales</div></div>'
+      +'<div class="stat"><div class="stat-l"><span>📊</span>Prom/Compra</div><div class="stat-v v-acc">'+(nCompras>0?fmtM(tGasto/nCompras):'-')+'</div><div class="stat-s">ticket promedio</div></div>'
+      +'</div>'
+      +'<div class="compras-grid">'
+      +'<div class="card"><div class="sec"><span class="dot" style="background:var(--pur)"></span>Gasto por Categoría</div>'+catBars+'</div>'
+      +'<div class="card"><div class="sec"><span class="dot" style="background:#06b6d4"></span>Gasto por Proveedor</div>'+provBars+'</div>'
+      +'</div>'
+      +'<div class="card" style="overflow-x:auto"><div class="sec"><span class="dot" style="background:var(--pur)"></span>Últimas Compras</div>'
+      +'<div class="tbl-wrap"><table><thead><tr><th>Fecha</th><th>Categoría</th><th>Detalle</th><th>Monto</th><th>Proveedor</th><th>Autorizó</th><th>Factura</th></tr></thead><tbody>'+compraRows+'</tbody></table></div></div>';
+  }else{
+    comprasH='<div class="divider"><span class="divider-label">Compras y Materiales</span></div>'
+      +'<div class="card" style="text-align:center;padding:40px;color:var(--txm)"><div style="font-size:32px;margin-bottom:8px">🛒</div>Sin órdenes de compra cargadas. Aparecen acá cuando se carguen desde el formulario.</div>';
   }
 
-  // Paradas section
-  let paradasHtml = '';
-  if (Object.keys(bMot).length > 0) {
-    const bars = Object.entries(bMot).sort((a,b)=>b[1]-a[1]).map(([m,ct]) => {
-      const col = m==='Rotura mecánica'?'var(--red)':m==='Sin combustible'?'var(--acc)':'var(--blu)';
-      const w = Math.max((ct/mxP)*100,2);
-      return `<div class="bar-row"><div class="bar-label">${m}</div><div class="bar-track"><div class="bar-fill" style="width:${w}%;background:${col}">${w>18?`<span>${ct}</span>`:''}</div>${w<=18?`<span class="bar-ext" style="left:calc(${w}% + 8px)">${ct}</span>`:''}</div><div class="bar-sub">${ct}x</div></div>`;
-    }).join('');
-    
-    paradasHtml = `<div class="card"><div class="sec"><span class="dot" style="background:var(--red)"></span>Análisis de Paradas</div>
-      <div class="analysis-grid"><div>${bars}</div>
-      <div style="font-size:13px;color:var(--txd);line-height:1.7">
-        <div style="font-weight:700;color:var(--tx);margin-bottom:6px">Resumen</div>
-        <div>Paradas totales: <b style="color:var(--tx)">${tPar}</b></div>
-        <div>Horas perdidas: <b style="color:var(--red)">${fmt(tHsT-tHs)}h</b></div>
-        <div>% improductivo: <b style="color:${prod<.9?'var(--red)':'var(--grn)'}">${pct(1-prod)}</b></div>
-        ${fs>0?`<div style="margin-top:8px;padding:8px;background:var(--accd);border-radius:6px;color:var(--acc);font-size:12px;font-weight:600">⛽ ${fs} paradas por combustible evitables</div>`:''}
-      </div></div></div>`;
-  }
-
-  // Detail panel
-  let detailHtml = '';
-  if (SEL_MAQ && bM[SEL_MAQ]) {
-    const det = bM[SEL_MAQ]; const ds = det.d.size;
-    const dp = ds > 0 ? 1 - det.rot/ds : 1;
-    const cells = [
-      ['Días', ds, 'v-blu'], ['Hs Netas', fmt(det.h), 'v-acc'],
-      ['Roturas', det.rot, det.rot>3?'v-red':'v-grn'],
-      ['Disponib.', ds>0?pct(dp):'-', dp<.85?'v-red':'v-grn'],
-      ['Combustible', fmt(det.cb)+' lts', 'v-grn'],
-      ['Hs/Día', ds>0?fmt(det.h/ds):'-', 'v-blu']
-    ].map(([l,v,cl]) => `<div class="detail-cell"><div class="detail-v ${cl}">${v}</div><div class="detail-l">${l}</div></div>`).join('');
-    
-    let obsHtml = '';
-    if (det.obs.length > 0) {
-      obsHtml = `<div style="margin-top:12px"><div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px">Historial de roturas:</div>
-        ${det.obs.slice(-5).map(o => `<div style="font-size:12px;color:var(--txd);padding:4px 0;border-bottom:1px solid var(--s2)"><b style="color:var(--tx)">${o.f}</b> — ${o.o}</div>`).join('')}</div>`;
-    }
-    
-    detailHtml = `<div class="card card-sel"><div class="sec"><span class="dot" style="background:var(--acc)"></span>Detalle: ${SEL_MAQ}</div>
-      <div class="detail-grid">${cells}</div>${obsHtml}
-      <button class="close-btn" onclick="SEL_MAQ=null;render()">Cerrar detalle</button></div>`;
-  }
-
-  // Table
-  let tblRows = '';
-  Object.entries(bM).sort((a,b) => b[1].h - a[1].h).forEach(([n,m]) => {
-    const ds = m.d.size; const dp = ds>0 ? 1-m.rot/ds : 1;
-    const dpCl = dp>=.9?'b-grn':dp>=.7?'b-yel':'b-red';
-    tblRows += `<tr onclick="SEL_MAQ='${n.replace(/'/g,"\\'")}';render()">
-      <td style="font-weight:600">${n}</td><td>${ds}</td>
-      <td style="font-family:var(--m);font-size:12px">${fmt(m.h)}</td>
-      <td style="font-family:var(--m);font-size:12px">${ds>0?fmt(m.h/ds):'-'}</td>
-      <td>${m.rot>0?`<span class="badge b-red">${m.rot}</span>`:'<span class="badge b-grn">0</span>'}</td>
-      <td>${m.par>0?`<span class="badge b-yel">${m.par}</span>`:'<span class="badge b-grn">0</span>'}</td>
-      <td><span class="badge ${dpCl}">${pct(dp)}</span></td>
-      <td style="font-family:var(--m);font-size:12px">${fmt(m.cb)} lts</td></tr>`;
-  });
-
-  // Assemble
-  app.innerHTML = `
-    <div class="ts" style="margin-bottom:12px">
-      <span>📡 ${ALL_DATA.length} registros cargados desde Google Sheets</span>
-      <span>· Última actualización: ${new Date().toLocaleTimeString('es-AR')}</span>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><div class="stat-l"><span>📊</span>Registros</div><div class="stat-v v-acc">${data.length}</div><div class="stat-s">${tDias} días trabajados</div></div>
-      <div class="stat"><div class="stat-l"><span>⏱</span>Horas Máquina</div><div class="stat-v v-blu">${fmt(tHs)}</div><div class="stat-s">productividad ${pct(prod)}</div></div>
-      <div class="stat"><div class="stat-l"><span>🔧</span>Roturas</div><div class="stat-v v-red">${tRot}</div><div class="stat-s">${tPar} paradas total</div></div>
-      <div class="stat"><div class="stat-l"><span>⛽</span>Combustible</div><div class="stat-v v-grn">${fmt(tComb)}</div><div class="stat-s">litros consumidos</div></div>
-    </div>
-
-    ${alertsHtml ? `<div class="card">${alertsHtml}</div>` : ''}
-
-    <div class="grid2">
-      <div class="card"><div class="sec"><span class="dot" style="background:var(--acc)"></span>Horas por Máquina</div>
-        ${barsHtml(Object.entries(bM).sort((a,b)=>b[1].h-a[1].h).map(([n,m])=>[n,m.h,m.d.size+'d']), mxM, 0)}
-        <div class="hint">Clic en una barra para ver detalle</div></div>
-      <div class="card"><div class="sec"><span class="dot" style="background:var(--grn)"></span>Horas por Operador</div>
-        ${barsHtml(Object.entries(bO).sort((a,b)=>b[1].h-a[1].h).map(([n,o])=>[n,o.h,o.d.size+'d']), mxO, 2)}</div>
-    </div>
-
-    ${paradasHtml}
-    ${detailHtml}
-
-    <div class="card" style="overflow-x:auto"><div class="sec"><span class="dot" style="background:var(--blu)"></span>Tabla Resumen por Máquina</div>
-      <div class="tbl-wrap"><table><thead><tr>
-        <th>Máquina</th><th>Días</th><th>Hs Netas</th><th>Hs/Día</th><th>Roturas</th><th>Paradas</th><th>Disponib.</th><th>Combustible</th>
-      </tr></thead><tbody>${tblRows}</tbody></table></div></div>
-
-    <div class="footer">METCON S.A.S — Dashboard Operativo · ${data.length} registros · Datos en tiempo real desde Google Sheets</div>
-  `;
+  // ASSEMBLE
+  app.innerHTML=''
+    +'<div class="ts" style="margin-bottom:12px"><span>📡 '+ALL_DATA.length+' registros maquinaria + '+ALL_COMPRAS.length+' órdenes de compra</span><span>· Actualizado: '+new Date().toLocaleTimeString('es-AR')+'</span></div>'
+    +'<div class="stats">'
+    +'<div class="stat"><div class="stat-l"><span>📊</span>Registros</div><div class="stat-v v-acc">'+data.length+'</div><div class="stat-s">'+tDias+' días trabajados</div></div>'
+    +'<div class="stat"><div class="stat-l"><span>⏱</span>Horas Máquina</div><div class="stat-v v-blu">'+fmt(tHs)+'</div><div class="stat-s">productividad '+pct(prod)+'</div></div>'
+    +'<div class="stat"><div class="stat-l"><span>🔧</span>Roturas</div><div class="stat-v v-red">'+tRot+'</div><div class="stat-s">'+tPar+' paradas total</div></div>'
+    +'<div class="stat"><div class="stat-l"><span>⛽</span>Combustible</div><div class="stat-v v-grn">'+fmt(tComb)+'</div><div class="stat-s">litros</div></div>'
+    +(compras.length>0?'<div class="stat"><div class="stat-l"><span>🛒</span>Compras</div><div class="stat-v v-pur">'+fmtM(tGasto)+'</div><div class="stat-s">'+nCompras+' órdenes</div></div>':'')
+    +'</div>'
+    +(alertsH?'<div class="card">'+alertsH+'</div>':'')
+    +'<div class="grid2">'
+    +'<div class="card"><div class="sec"><span class="dot" style="background:var(--acc)"></span>Horas por Máquina</div>'+maqBars+'<div class="hint">Clic en una barra para ver detalle</div></div>'
+    +'<div class="card"><div class="sec"><span class="dot" style="background:var(--grn)"></span>Horas por Operador</div>'+opBars+'</div>'
+    +'</div>'
+    +parH+detH
+    +'<div class="card" style="overflow-x:auto"><div class="sec"><span class="dot" style="background:var(--blu)"></span>Tabla Resumen por Máquina</div><div class="tbl-wrap"><table><thead><tr><th>Máquina</th><th>Días</th><th>Hs Netas</th><th>Hs/Día</th><th>Roturas</th><th>Paradas</th><th>Disponib.</th><th>Combustible</th></tr></thead><tbody>'+tblR+'</tbody></table></div></div>'
+    +comprasH
+    +'<div class="footer">METCON S.A.S — Dashboard Operativo · '+data.length+' registros + '+compras.length+' compras · Datos en tiempo real</div>';
 }
 
-// ===== INIT =====
-loadData();
-// Auto-refresh every 5 minutes
-setInterval(loadData, 300000);
+loadAll();
+setInterval(loadAll,300000);
 </script>
 </body>
 </html>
