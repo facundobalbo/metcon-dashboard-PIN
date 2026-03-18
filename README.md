@@ -2,7 +2,7 @@
 
 Dashboard en tiempo real para gestión de maquinaria en obra. Lee datos automáticamente desde Google Sheets.
 
-**[Ver Dashboard →](https://facundobalbo.github.io/metcon-dashboard)**
+**[Ver Dashboard →](https://facundobalbo.github.io/metcon-dashboard-PIN/)**
 
 ## Qué muestra
 
