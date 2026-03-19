@@ -106,7 +106,7 @@ tr:hover td { background:rgba(255,255,255,.02); }
 .total-costo .val { font-size:26px; font-weight:800; color:var(--acc); }
 .total-costo .lbl { font-size:12px; color:var(--txd); margin-top:4px; }
 
-/* ── EQUIPOS  ── */
+/* ── EQUIPOS (Gabriel) ── */
 .equipo-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
 .equipo-card { background:var(--s1); border-radius:var(--r); border:2px solid var(--brd);
   padding:16px; transition:.2s; }
@@ -558,6 +558,13 @@ function renderEquipos(data) {
     h += fluidoPill('⚙️', 'AcHid', fls.aceiteHidraulico);
     h += '</div>';
 
+    // Mantenimiento: engrase y filtros
+    var mt = m.mantenimiento || {};
+    h += '<div class="eq-fluidos" style="margin-top:4px">';
+    h += mantPill('🟡', 'Engrase', mt.engrase);
+    h += mantPill('🔵', 'Filtros', mt.filtros);
+    h += '</div>';
+
     // Último checklist
     if (m.checklist) {
       var ck = m.checklist;
@@ -590,6 +597,19 @@ function renderEquipos(data) {
 function fluidoPill(emoji, label, fluido) {
   var cls  = fluido ? nivelClass(fluido.nivel) : 'nd';
   var txt  = fluido ? (nivelEmoji(fluido.nivel)+' '+nivelLabel(fluido.nivel)) : '❓ Sin datos';
+  return '<div class="fluido-pill '+cls+'"><span>'+emoji+'</span><span>'+label+': '+txt+'</span></div>';
+}
+
+function mantPill(emoji, label, dato) {
+  if (!dato) {
+    return '<div class="fluido-pill nd"><span>'+emoji+'</span><span>'+label+': Sin registro</span></div>';
+  }
+  // Días desde último
+  var partes = dato.fecha.split('/');
+  var d = new Date(partes[2], partes[1]-1, partes[0]);
+  var dias = Math.floor((new Date() - d) / 86400000);
+  var cls = dias > 14 ? 'bajo' : 'ok';
+  var txt = dias === 0 ? 'Hoy' : dias === 1 ? 'Ayer' : 'Hace '+dias+' días';
   return '<div class="fluido-pill '+cls+'"><span>'+emoji+'</span><span>'+label+': '+txt+'</span></div>';
 }
 
