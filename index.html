@@ -8,15 +8,22 @@
 /* ── RESET & VARS ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
 :root {
-  --bg:#0c0e12; --s1:#151820; --s2:#1c2029; --brd:#2a3040;
-  --tx:#e2e5ea; --txd:#8892a0; --txm:#5c6370;
-  --acc:#f59e0b; --accd:rgba(245,158,11,.14);
-  --grn:#22c55e; --grnd:rgba(34,197,94,.14);
-  --red:#ef4444; --redd:rgba(239,68,68,.14);
-  --blu:#3b82f6; --blud:rgba(59,130,246,.14);
-  --pur:#a855f7; --purd:rgba(168,85,247,.14);
-  --ora:#f97316; --orad:rgba(249,115,22,.14);
-  --yel:#eab308; --yeld:rgba(234,179,8,.14);
+  /* Metcon dark theme */
+  --bg:#0a0d12; --s1:#111620; --s2:#181e2a; --brd:#243044;
+  --tx:#dce6f0; --txd:#7a91a8; --txm:#4a6070;
+  /* Brand: Metcon navy + slate */
+  --acc:#5b8db8;       /* azul medio Metcon — acento principal */
+  --accd:rgba(91,141,184,.15);
+  --acc2:#2d4b6e;      /* navy oscuro Metcon */
+  --acc2d:rgba(45,75,110,.2);
+  --acc3:#c4d0da;      /* gris claro Metcon */
+  /* Semáforos — se mantienen estándar para legibilidad */
+  --grn:#34c97a; --grnd:rgba(52,201,122,.14);
+  --red:#e85555; --redd:rgba(232,85,85,.14);
+  --blu:#5b8db8; --blud:rgba(91,141,184,.14);
+  --pur:#7a9fc0; --purd:rgba(122,159,192,.14);
+  --ora:#6fa8c8; --orad:rgba(111,168,200,.14);
+  --yel:#8ab4cc; --yeld:rgba(138,180,204,.14);
   --r:14px; --rs:8px;
 }
 html, body { height:100%; background:var(--bg); color:var(--tx);
@@ -25,14 +32,14 @@ html, body { height:100%; background:var(--bg); color:var(--tx);
 /* ── LAYOUT ── */
 .app { display:flex; flex-direction:column; height:100vh; }
 .topbar { flex-shrink:0; display:flex; align-items:center; justify-content:space-between;
-  padding:14px 20px; border-bottom:1px solid var(--brd); background:var(--s1); }
+  padding:12px 18px; border-bottom:1px solid var(--brd); background:linear-gradient(135deg,#0d1520 0%,#111e30 100%); }
 .topbar h1 { font-size:17px; color:var(--acc); letter-spacing:1px; font-weight:700; }
 .topbar .sub { font-size:11px; color:var(--txd); margin-top:2px; }
-.tabs { flex-shrink:0; display:flex; gap:0; border-bottom:1px solid var(--brd); background:var(--s1); }
+.tabs { flex-shrink:0; display:flex; gap:0; border-bottom:1px solid var(--brd); background:#0d1520; }
 .tab { flex:1; padding:14px 8px; text-align:center; font-size:13px; font-weight:600;
   color:var(--txd); cursor:pointer; border:none; background:none; font-family:inherit;
   border-bottom:3px solid transparent; transition:.15s; }
-.tab.on { color:var(--tx); border-bottom-color:var(--acc); }
+.tab.on { color:var(--acc3); border-bottom-color:var(--acc); font-weight:700; }
 .body { flex:1; overflow-y:auto; padding:16px 16px 32px; max-width:960px; margin:0 auto; width:100%; }
 
 /* ── SHARED COMPONENTS ── */
@@ -43,7 +50,7 @@ html, body { height:100%; background:var(--bg); color:var(--tx);
   background:var(--s2); border:1px solid var(--brd); border-radius:var(--rs);
   padding:9px 12px; font-size:14px; color:var(--tx); font-family:inherit; outline:none; }
 .flt-group select:focus, .flt-group input:focus { border-color:var(--acc); }
-.btn-refresh { background:var(--acc); color:#000; border:none; border-radius:var(--rs);
+.btn-refresh { background:var(--acc2); color:var(--acc3); border:1px solid var(--acc); border:none; border-radius:var(--rs);
   padding:9px 18px; font-size:14px; font-weight:700; cursor:pointer; font-family:inherit;
   align-self:flex-end; transition:.15s; white-space:nowrap; }
 .btn-refresh:active { transform:scale(.97); }
@@ -51,9 +58,9 @@ html, body { height:100%; background:var(--bg); color:var(--tx);
 
 .cards { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:12px; margin-bottom:16px; }
 .card { background:var(--s1); border:1px solid var(--brd); border-radius:var(--r); padding:16px; }
-.card.accent { border-color:rgba(245,158,11,.3); }
+.card.accent { border-color:rgba(91,141,184,.35); background:linear-gradient(135deg,var(--s1),rgba(45,75,110,.25)); }
 .card-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; color:var(--txd); margin-bottom:8px; }
-.card-val { font-size:28px; font-weight:800; color:var(--acc); line-height:1; }
+.card-val { font-size:28px; font-weight:800; color:var(--acc); line-height:1; letter-spacing:-0.5px; }
 .card-sub { font-size:12px; color:var(--txm); margin-top:5px; }
 .card-val.grn { color:var(--grn); }
 .card-val.red { color:var(--red); }
@@ -99,7 +106,7 @@ tr:hover td { background:rgba(255,255,255,.02); }
 .total-costo .val { font-size:26px; font-weight:800; color:var(--acc); }
 .total-costo .lbl { font-size:12px; color:var(--txd); margin-top:4px; }
 
-/* ── EQUIPOS (Gabriel) ── */
+/* ── EQUIPOS  ── */
 .equipo-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
 .equipo-card { background:var(--s1); border-radius:var(--r); border:2px solid var(--brd);
   padding:16px; transition:.2s; }
@@ -153,15 +160,31 @@ tr:hover td { background:rgba(255,255,255,.02); }
 
   <!-- TOP BAR -->
   <div class="topbar">
-    <div>
-      <div style="font-size:17px;color:var(--acc);font-weight:700;letter-spacing:1px">METCON S.A.S</div>
-      <div style="font-size:12px;color:var(--tx);margin-top:3px;font-weight:500">Cierre Perimetral — Parque Industrial Norte</div>
-      <div class="sub" id="lastUpdate" style="font-size:11px;color:var(--txm);margin-top:2px">Dashboard de campo — Responsabilidad Grupo Metcon</div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <!-- Metcon M logo SVG -->
+      <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Back pill left: dark navy -->
+        <ellipse cx="32" cy="62" rx="22" ry="14" fill="#2d4b6e" transform="rotate(-15 32 62)"/>
+        <!-- Ribbon light gray: flows top-left to bottom-right -->
+        <path d="M14 38 Q30 22 50 30 Q70 38 86 22 Q90 18 88 28 Q74 46 54 38 Q34 30 18 48 Z" fill="#c4d0da"/>
+        <!-- Front pill right: slate blue -->
+        <ellipse cx="68" cy="38" rx="22" ry="14" fill="#5b7a9b" transform="rotate(-15 68 38)"/>
+        <!-- Middle ribbon dark: the M valley -->
+        <path d="M10 52 Q26 34 50 42 Q74 50 90 32 Q88 46 68 56 Q46 64 28 58 Z" fill="#2d4b6e" opacity="0.7"/>
+      </svg>
+      <div>
+        <div style="font-size:16px;color:var(--acc3);font-weight:800;letter-spacing:2px;line-height:1">GRUPO <span style="color:var(--acc)">METCON</span></div>
+        <div style="font-size:10px;color:var(--txd);letter-spacing:1.5px;margin-top:2px;text-transform:uppercase">Soluciones en Ingeniería</div>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:12px;color:var(--tx);font-weight:500">Cierre Parque Industrial Norte</div>
+      <div class="sub" id="lastUpdate" style="font-size:10px;color:var(--txm);margin-top:2px">Campo — Grupo Metcon</div>
     </div>
   </div>
   <!-- AVISO DATOS PARCIALES -->
-  <div style="background:rgba(245,158,11,.08);border-bottom:1px solid rgba(245,158,11,.2);padding:7px 16px;font-size:11px;color:var(--txd);display:flex;align-items:center;gap:6px">
-    <span style="color:var(--acc)">⚠</span>
+  <div style="background:rgba(45,75,110,.2);border-bottom:1px solid rgba(91,141,184,.2);padding:7px 16px;font-size:11px;color:var(--txd);display:flex;align-items:center;gap:6px">
+    <span style="color:var(--acc)">ℹ</span>
     <span>Los datos reflejan <strong style="color:var(--tx)">exclusivamente la operación de Grupo Metcon</strong> en obra. No incluyen información de otras empresas subcontratistas (hormigón, muros, etc.). Registros históricos completos desde 05/01/2026; datos de combustible y OC desde 17/03/2026.</span>
   </div>
 
@@ -242,7 +265,7 @@ tr:hover td { background:rgba(255,255,255,.02); }
 // ============================================================
 // CONFIG — CAMBIÁ ESTO CON TU URL DE APPS SCRIPT
 // ============================================================
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjrGKdXQQH2-lp0jfbLwxZWte_MUD-KpY_qDjs_Yu_98eCs6m7DMIjS-EA06EGqaQ/exec';
+var SCRIPT_URL = 'TU_URL_DE_APPS_SCRIPT_ACÁ';
 // Ejemplo:
 // var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycb.../exec';
 // ============================================================
