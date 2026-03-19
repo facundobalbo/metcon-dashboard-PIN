@@ -154,9 +154,15 @@ tr:hover td { background:rgba(255,255,255,.02); }
   <!-- TOP BAR -->
   <div class="topbar">
     <div>
-      <div class="topbar h1" style="font-size:17px;color:var(--acc);font-weight:700;letter-spacing:1px">METCON S.A.S</div>
-      <div class="sub" id="lastUpdate">Dashboard de Gestión de Obra</div>
+      <div style="font-size:17px;color:var(--acc);font-weight:700;letter-spacing:1px">METCON S.A.S</div>
+      <div style="font-size:12px;color:var(--tx);margin-top:3px;font-weight:500">Cierre Perimetral — Parque Industrial Norte</div>
+      <div class="sub" id="lastUpdate" style="font-size:11px;color:var(--txm);margin-top:2px">Dashboard de campo — Responsabilidad Grupo Metcon</div>
     </div>
+  </div>
+  <!-- AVISO DATOS PARCIALES -->
+  <div style="background:rgba(245,158,11,.08);border-bottom:1px solid rgba(245,158,11,.2);padding:7px 16px;font-size:11px;color:var(--txd);display:flex;align-items:center;gap:6px">
+    <span style="color:var(--acc)">⚠</span>
+    <span>Los datos reflejan <strong style="color:var(--tx)">exclusivamente la operación de Grupo Metcon</strong> en obra. No incluyen información de otras empresas subcontratistas (hormigón, muros, etc.). Registros históricos completos desde 05/01/2026; datos de combustible y OC desde 17/03/2026.</span>
   </div>
 
   <!-- TABS -->
@@ -236,7 +242,7 @@ tr:hover td { background:rgba(255,255,255,.02); }
 // ============================================================
 // CONFIG — CAMBIÁ ESTO CON TU URL DE APPS SCRIPT
 // ============================================================
-var SCRIPT_URL = 'TU_URL_DE_APPS_SCRIPT_ACÁ';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjrGKdXQQH2-lp0jfbLwxZWte_MUD-KpY_qDjs_Yu_98eCs6m7DMIjS-EA06EGqaQ/exec';
 // Ejemplo:
 // var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycb.../exec';
 // ============================================================
