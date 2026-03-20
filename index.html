@@ -283,14 +283,29 @@ function showTab(t) {
   if (t==='equipos' && !window._equiposCargados) loadEquipos();
 }
 
-// ═══ FETCH HELPER ═══
+// ═══ FETCH HELPER (JSONP — evita CORS con Apps Script) ═══
 function fetchData(params, callback) {
-  var url = SCRIPT_URL + '?action=data&' + Object.entries(params)
-    .map(function(p){ return p[0]+'='+encodeURIComponent(p[1]); }).join('&');
-  fetch(url)
-    .then(function(r){ return r.json(); })
-    .then(callback)
-    .catch(function(e){ callback({ error: e.toString() }); });
+  var cbName = '_cb_' + Date.now();
+  var url = SCRIPT_URL + '?action=data&callback=' + cbName + '&' +
+    Object.keys(params).map(function(k){
+      return k + '=' + encodeURIComponent(params[k]);
+    }).join('&');
+
+  window[cbName] = function(data) {
+    delete window[cbName];
+    document.head.removeChild(document.getElementById(cbName));
+    callback(data);
+  };
+
+  var script = document.createElement('script');
+  script.id  = cbName;
+  script.src = url;
+  script.onerror = function() {
+    delete window[cbName];
+    document.head.removeChild(script);
+    callback({ error: 'No se pudo conectar con Apps Script. Verificá el SCRIPT_URL y el deploy.' });
+  };
+  document.head.appendChild(script);
 }
 
 // ═══ FORMATTERS ═══
